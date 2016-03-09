@@ -1,0 +1,120 @@
+<!-- TIMELINE STUFF GOES HERE -->
+<template name="timeline">
+    <div class="row">
+        <div class="col-sm-12">
+            <!--fixed filter panel-->
+            <div class="fixed panel panel-grey">
+                <div class="panel-heading">
+                    <h2 class="panel-title"><i class="fa fa-filter"></i> Filter by: </h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <!--Dates form -->
+                        <div class="datebuttons col-sm-12 col-lg-4">
+                            <p> <b>View Past</b></p>
+                            
+                            <form action="" name="typeform">
+                            <div class="btn-group" aria-label="..." data-toggle="buttons" role="group">
+                            
+                                <button class="mapButton btn btn-default btn-primary" id="day" type="button" value="day" onclick="setperiod(this)">7 Days</button>
+                                
+                                <button class="mapButton btn btn-default btn-primary" id="month" type="button" value="month" onclick="setperiod(this)">30 Days</button>
+                                
+                                <button class="mapButton btn btn-default btn-primary active" id="year" type="button" value="year" onclick="setperiod(this)">365 Days</button>
+
+
+                            </div>
+                            </form>
+                            
+                            
+<!--
+                            
+-->
+                        </div>
+
+                        <div class=" col-sm-12 col-lg-4">
+                            <p> <b>Ticket Type</b></p>
+                            <form action="" name="typeform">
+                                <div class="btn-group" data-toggle="buttons">
+                                  <label class="btn btn-primary active">
+                                    <input type="radio" name="type" id="open" autocomplete="off" value="open" onchange='handleChange(open)' checked> Open Tickets
+                                  </label>
+                                  <label class="btn btn-primary">
+                                    <input type="radio" name="type" id="overdue" autocomplete="off" value="overdue" onchange='handleChange(overdue)'> Open Overdue ONLY
+                                  </label>
+
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="col-sm-12 col-lg-4">
+                            <p> <b>Select District</b></p>
+                            <p id="district-select">
+                                <select id="district" class="selectpicker" name="district"></select>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-grey">
+                <div class="panel-heading">
+                    <h2 class="panel-title" id="title"><i class="fa fa-globe"></i> Miami-Dade 311 Requests: {{getDepartment}}</h2>
+                </div>
+
+
+                <div class="panel-body">
+                    <!--Map -->
+                    <div class="mapdiv col-sm-6">
+                        <div id="map"></div>
+                    </div>
+
+
+
+                    <div class="col-sm-6 map-filters">
+                        <div class="row">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="formdesign">Custom Date Range</h4>
+                                    <!-- Set Date Range -->
+                                </div>
+                                <div class="panel-body">
+                                    <input type="date" id="datestart" name="datestart" class="formdesign" placeholder="mm/dd/yyyy"> to
+                                    <input type="date" id="dateend" name="dateend" class="formdesign" placeholder="mm/dd/yyyy">
+                                    <button id="goButton" class="btn btn-primary btn-md" type="button" onclick="setRange()">Go</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>Filter by Issue Type</h4>
+                                </div>
+                                <div id="mapDropdown" class="panel-body">
+                                    <form id="issueForm">
+                                        <select class="btn dropdown-toggle btn-default" id="selectIssue" onchange='issuechange()'>
+                                            <option>Select an Issue Type</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <script type="text/javascript">
+                            populateDistrictSelect();
+                    </script>
+                </div>
+                <!-- PANEL BODY DIV END -->
+            </div>
+            <!--    END PANEL DIV-->
+        </div>
+    </div>
+    <!--    end row div-->
+<script>
+    setMap();
+</script>
+</template>

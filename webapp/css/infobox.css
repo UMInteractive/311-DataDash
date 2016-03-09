@@ -1,0 +1,184 @@
+/* Global Variables */
+/* Global styling */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f2f2;
+  color: #337ab7;
+}
+#debug-panel {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bitter';
+}
+.navbar-inverse,
+.side-nav {
+  background-color: #d7d7d7;
+  border-color: #555;
+}
+#wrapper {
+  background-color: #fff;
+}
+/* Top nav */
+#wrapper > nav > div.navbar-header > a {
+  color: #f5f5f5;
+  border-bottom: 0;
+}
+#wrapper > nav > div.navbar-header > a {
+  width: 225px;
+}
+.navbar-header {
+  background-color: #337ab7;
+}
+#wrapper > nav > div.navbar-header > button {
+  border-color: #f5f5f5;
+}
+#wrapper > nav > div.collapse.navbar-collapse.navbar-ex1-collapse {
+  background-color: #337ab7;
+}
+#wrapper > nav > div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
+  border-right: 1px solid #555;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  color: #337ab7;
+}
+#district-select {
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+.current-department {
+  color: #f5f5f5;
+  float: left;
+  margin: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+/* Admin buttons */
+#login-name-link {
+  color: #333;
+  text-decoration: underline;
+}
+/********************/
+.nav li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+/* LEAFLET STYLES */
+#map {
+  height: 600px;
+  width: 500px;
+}
+
+/* Most Requested */
+.infoBox {
+text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-bottom: 10px;
+   
+}
+.infoBox2 {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-top: 6px;
+    height: 75px;
+    margin-bottom: 6px;
+
+}
+
+.infoBox2ListContainer{
+    border: 1px solid gray;
+    border-radius: 3px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    
+}
+.infoBoxName {
+background: #337ab7;
+font-family: 'Bitter';
+color: white;
+padding: 3px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 15px;
+/*margin-top: 10px;*/
+margin-bottom: 10px;
+font-size: 18px; 
+text-align: left;
+font: bold;
+
+}
+.infoBoxName2 {
+background: #d7d7d7;
+color: black;
+padding: 3px;
+font-size: 12px;
+height: 40px;
+display: flex;
+align-items: center;
+}
+
+.infoBoxName2 span {
+    text-align: center;
+    width: 100%;
+    
+}
+.infoBoxTicNum {
+font-size: 24px;
+margin-top: 0px;
+}
+
+
+/* info box view all button */
+.infoBoxBtn{
+margin-bottom: 5px;
+margin-top: 13px; 
+  border-color: #337ab7;
+  color: #337ab7;
+ 
+}
+.infoBoxBtn.hover {
+    background-color: #337ab7;
+  color: #f2f2f2;
+}
+a#infoBoxBtnView {
+    background-color: #f2f2f2;
+    border-color: #337ab7;
+    color: #337ab7;
+}
+
+a#infoBoxBtnView:hover {
+  background-color: #337ab7;
+  color: #f2f2f2;
+}
+
+a#infoBoxBtnView.active {
+  background-color: #337ab7;
+}
+   
+.infoBoxAvgNum span{
+font-size: 24px;
+}
+.infoBoxHeader{
+background: #337ab7;
+font-family: 'Bitter';
+color: white;
+padding: 3px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 15px;
+margin-bottom: 10px;
+font-size: 18px; 
+text-align: left;
+font: bold;
+}
+
+

@@ -1,0 +1,31 @@
+<head>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+    <script src='http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Bitter|Lato' rel='stylesheet' type='text/css'>
+</head>
+
+
+
+
+
+
+<template name="main">
+
+    <div id="wrapper">
+        {{> nav}}
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+                <!--{{> sessionDebug}}-->
+                <div class="row">
+                    <script>
+                        echoQueryString();
+                    </script>
+                    {{> yield}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

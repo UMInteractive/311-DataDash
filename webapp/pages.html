@@ -1,0 +1,177 @@
+<!-- Site Views and Model Components -->
+
+<template name="animalServices">
+{{> backEnd}}
+</template>
+
+
+<template name="communityOutreach">
+ {{> backEnd}}
+</template>
+
+
+<template name="publicWorks">
+ {{> backEnd}}
+</template>
+
+
+<template name="raam2793">
+{{> backEnd}}
+</template>
+
+
+<template name="regulatoryEconRes">
+
+    {{> backEnd}}
+</template>
+
+
+<template name="wasteManagement">
+
+    {{> backEnd}}
+</template>
+
+
+<template name="chartArea">
+    {{> timeline}}
+
+    <div class="row">
+        {{> receivedMethodChart}}
+    </div>
+</template>
+
+
+<template name="receivedMethodChart">
+    <!--method received chart start div -->
+    <div class="col-lg-12">
+        <div class="panel panel-grey">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-tablet"></i> Method Received</h3>
+            </div>
+            <div class="panel-body">
+                <div id="receivedMethodChart" class="method-chart"></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="backEnd">
+    {{deptCall makeCall}} {{openIssueType}} {{openOverdue}}
+    {{listDept callDept}}
+
+     {{findPercents}}
+     {{addOpenIssues}}
+  
+    {{> mostRequestedBox  reck=mostRec dataInfo=showData showOT=showOpenTickets issueCount=showOpenIssueCount issueType=showOpenIssueType}}  
+    <br />
+    
+
+    {{> chartArea oTicket=showOpenTickets odTicket=showOpenOverdue }}
+</template>
+
+
+<template name="mostRequestedBox">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-grey" id="mostRequestedPanel">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-ticket"></i> Open Tickets</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2 text-center">
+                            <div class="infoBoxTotal">
+                                <div class="infoBox">
+                                    <div class="infoBoxName">
+                                        <span>Total</span>
+                                    </div>
+                                    <div class="infoBoxTicNum">
+                                        <span>{{showOT}}</span> <!--{{showOT}}-->
+                                    </div>
+                                    <div class="infoBoxBtn">
+                                        <a id="infoBoxBtnView" name="hideShowAll" class="btn btn-md btn-default"><b>View All</b><b style="display:none;">Hide All</b></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 text-center">
+                            <div>
+                                <div class="infoBox2ListContainer">
+                                    <div class="infoBoxHeader">
+                                        <span>Most Requested</span>
+
+                                    </div>
+
+                                    {{#each reck}} 
+                                    <div class="col-lg-3 text-center">
+
+                                        <div class="infoBox2">
+                                            <div class="infoBoxName2">
+                                                <span>{{this.[0]}}</span>
+                                            </div>
+                                            <div class="infoBoxTicNum">
+                                                <span>{{this.[1]}}</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                  {{/each}} 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div id="mostRequestedTogViewAll" style="display:none;" name="hideShowALL">
+                            <h3>Current Issue Type Breakdown: </h3> Number of Issues: {{issueCount}}
+
+                        <!-- class="{{hideShowall}}" -->
+                        <div class="row">
+
+                            <!--{{> progressBar}} -->
+                            <br /> {{#each dataInfo}}
+
+                            <div class="col-lg-5" style="text-align:right;">
+                                <span>{{this.[0]}} : </span> <!-- {{this.[1]}} -->
+                            </div>
+                            
+ <div class="col-lg-5">
+        <div class="progress">
+            <!-- OVERDUE -->
+            <div class="progress-bar progress-bar-danger" style="{{this.[3]}}"  title='{{this.[6]}}'>
+
+            </div>
+            <!-- OPEN --> 
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="{{this.[4]}}"  title='{{this.[5]}}'>
+            </div> 
+
+            
+        </div>
+    </div> 
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+</script>
+</template>
+
+
+
+<template name="home">
+
+  
+<img src="311-2.svg" style="width:304px;height:228px;" align="middle">
+
+
+
+</template>

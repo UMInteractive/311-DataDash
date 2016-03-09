@@ -1,0 +1,125 @@
+/* Global Variables */
+color     = #333
+bgcolor   = #F2F2F2
+headerColor = #337AB7
+
+/* Global styling */
+body
+  font-family 'Lato', sans-serif;
+  background-color #F2F2F2
+  color color
+
+#debug-panel
+  font-family Menlo, Monaco, Consolas, 'Courier New', monospace
+
+h1, h2, h3, h4, h5, h6 {
+  font-family 'Bitter'
+}
+
+h5 {
+font-family: 'Bitter';
+font-size: 12px;
+font-weight: bold;
+}
+
+//changing nav font for departments 
+#nav-dept-header, #nav-bar-title {
+    font-family 'Bitter';
+}
+
+.navbar-inverse, .side-nav {
+  background-color: #D7D7D7;
+  border-color: #555;
+}
+
+#wrapper { background-color: #fff; }
+
+/* Top nav */
+#wrapper > nav > div.navbar-header > a {
+  color: whitesmoke;
+  border-bottom 0
+}
+
+#wrapper > nav > div.navbar-header > a { width: 225px; }
+
+.navbar-header { background-color: headerColor; }
+#wrapper > nav > div.navbar-header > button { border-color: whitesmoke; }
+
+#wrapper > nav > div.collapse.navbar-collapse.navbar-ex1-collapse {
+  background-color: headerColor;
+}
+
+#wrapper > nav > div.collapse.navbar-collapse.navbar-ex1-collapse > ul {
+  border-right: 1px solid #555;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  color: #333;
+}
+
+#district-select {
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+
+.current-department {
+  color: whitesmoke;
+  float:left;
+  margin: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Admin buttons */
+#login-name-link {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Day/Month/Year selectors */
+.datebuttons > button {
+  background-color  bgcolor;
+  border-color      headerColor;
+  color             headerColor;
+}
+
+.datebuttons > button:hover {
+  background-color: headerColor;
+  color: #fff;
+}
+
+.datebuttons > button.active {
+  background-color: headerColor;
+}
+
+/********************/
+.nav li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+/* LEAFLET STYLES */
+#map {
+  height: 600px;
+  width: 98%;
+}
+
+.mapdiv {
+    padding-left: 0px;
+    padding-right: 0px; 
+}
+
+.rightbutton {
+  margin-left: 180px;
+  font-size: 1em;
+}
+
+.right {
+  margin-left: 400px;
+  margin-top: -135px;
+}
+
+div#mapDropdown {
+    height: 64px;    
+}

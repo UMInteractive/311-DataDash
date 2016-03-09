@@ -1,0 +1,25 @@
+<template name="sessionDebug">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-grey" id="debug-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-code"></i>
+                    </h3>
+                </div>
+                <div id="collapse1" class="panel-collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">Session.get("currDept")    : {{getCurrDept}}</li>
+                        <li class="list-group-item">Session.get("district")    : {{getDistrict}}</li>
+                        <!-- <li class="list-group-item" id="query-string">
+                            <button class="btn btn-default" onclick='echoQueryString()'>Update</button>
+                            Session.get("queryString") :
+                            <a target="_blank" href={{getQueryString}}>{{getQueryString}}</a> 
+                        </li> -->
+                        <li class="list-group-item">Timeline Query :<a id="timeline-query-string" target="_blank" href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
